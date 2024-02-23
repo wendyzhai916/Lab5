@@ -30,7 +30,8 @@ FLUSH PRIVILEGES;
 
 ### Tessaract OCR Setup
 
-Install Tesseract OCR on your system. Follow the installation guide for your operating system here.
+For detailed instructions on installing Tesseract OCR, including required dependencies and setup for different operating systems, please refer to the [Tesseract User Manual](https://tesseract-ocr.github.io/tessdoc/) and the [Tesseract GitHub Wiki](https://github.com/tesseract-ocr/tesseract/wiki).
+
 Update the path to the Tesseract executable in extract.py to match your installation.
 
 ## Usage
