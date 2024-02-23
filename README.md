@@ -20,7 +20,7 @@ pip install -r requirements.txt
 2. Create MYSQL database and user with the necessary permissions
 
 ```sql
-CREATE DATABASE your_database_name;
+CREATE DATABASE lab05;
 CREATE USER 'root'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON your_database_name.* TO 'root'@'localhost';
 FLUSH PRIVILEGES;
