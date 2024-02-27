@@ -45,12 +45,12 @@ python extract.py
 
 2. Web Scraping:
 ```bash
-python extract.py
+python scrape.py
 ```
 
 3. Data Preprocessing:
 ```bash
-python extract.py
+python preprocess.py
 ```
 
 4. Database Operations:
