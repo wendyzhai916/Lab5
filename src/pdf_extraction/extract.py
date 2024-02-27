@@ -66,8 +66,19 @@ def main():
             text = ocr_pdf_to_text(pdf_path)
             # Parse the text to extract relevant data
             # This is a placeholder - actual parsing logic will depend on the PDF structure
-            data = ('api_number_placeholder', 'longitude_placeholder', 'latitude_placeholder', 
-                    'well_name_placeholder', 'address_placeholder', 'stimulation_data_placeholder')
+            api_index = text.find('API: ') + len('API: ')
+            long_index = text.find('Longitude: ') + len('Longitude: ')
+            lat_index = text.find('Latitude: ') + len('Latitude: ')
+            well_index = text.find('Well Name: ') + len('Well Name: ')
+            address_index = text.find('(SHL:)')
+
+            api = text[api_index:text.find(" ", api_index)]
+            long = text[long_index:text.find(" ", long_index)]
+            lat = text[lat_index:text.find(" ", lat_index)]
+            well = text[well_index:text.find(" ", well_index)]
+            address = text[address_index:text.find(" ", address_index)]
+            
+            data = (api, long, lat, well, address)
             # Insert the data into the database
             insert_data_into_db(data)
 
